@@ -100,6 +100,16 @@ function NavResponsive() {
                 <Sheet.Body className="pt-4">
                     <NavContent />
                 </Sheet.Body>
+                <Sheet.Footer>
+                    <ListBox
+                        className="flex relative sm:flex-row flex-col sm:items-center gap-3 sm:gap-6"
+                        aria-label="Auth"
+                    >
+                        <NavLink textValue="Login" href="/login" id="/login">
+                            Login
+                        </NavLink>
+                    </ListBox>
+                </Sheet.Footer>
             </Sheet.Content>
         </Sheet>
     )
@@ -127,16 +137,6 @@ function NavContent() {
                         {item.name}
                     </NavLink>
                 )}
-            </ListBox>
-            <ListBox
-                orientation={isMobile ? 'vertical' : 'horizontal'}
-                layout={isMobile ? 'stack' : 'grid'}
-                className="flex mt-4 relative sm:flex-row flex-col sm:items-center gap-3 sm:gap-6"
-                aria-label="Auth"
-            >
-                <NavLink textValue="Login" href="/login" id="/login">
-                    Login
-                </NavLink>
             </ListBox>
         </LayoutGroup>
     )
