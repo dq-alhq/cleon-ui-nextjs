@@ -1,39 +1,37 @@
-import { Providers } from '@/components/providers'
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
-import { Toast } from 'ui'
 
-import './styles/app.css'
+import './styles/globals.css'
+
+import { Providers } from '@/components/providers'
 
 const fontSans = localFont({
-  src: './fonts/GeistVF.woff',
-  variable: '--font-sans'
+    src: './fonts/Walsheim.woff2',
+    variable: '--font-sans'
 })
 const fontMono = localFont({
-  src: './fonts/GeistMonoVF.woff',
-  variable: '--font-mono'
+    src: './fonts/JetbrainsMono.woff2',
+    variable: '--font-mono'
 })
 
 export const metadata: Metadata = {
-  title: {
-    template: '%s / Just D. Starter Kit with Next',
-    default: 'Just D. Starter Kit with Next'
-  },
-  description:
-    'Next.js 14 Starter Kit with Tailwind CSS, TypeScript, React, React Aria Components, Justd Components, Framer Motion, and more.'
+    title: {
+        template: '%s / Cleon Next',
+        default: 'Cleon Next'
+    },
+    description: 'Next.js 14 Starter Kit with Cleon-UI'
 }
 
 export default function RootLayout({
-  children
+    children
 }: Readonly<{
-  children: React.ReactNode
+    children: React.ReactNode
 }>) {
-  return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${fontSans.variable} ${fontMono.variable} antialiased min-h-svh bg-tertiary font-sans`}>
-        <Toast />
-        <Providers>{children}</Providers>
-      </body>
-    </html>
-  )
+    return (
+        <html lang="en" suppressHydrationWarning>
+            <body className={`${fontSans.variable} ${fontMono.variable} antialiased min-h-svh bg-background font-sans`}>
+                <Providers>{children}</Providers>
+            </body>
+        </html>
+    )
 }

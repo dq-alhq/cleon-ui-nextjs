@@ -1,1 +1,1 @@
-Just D. Starter Kit with Next.js. No more headaches. Not sure what to do? Hover over to the [docs](https://getjustd.com/docs/getting-started/installation).
+This is a Next JS 14 Project with Cleon-UI Implementation. To get started, please visit [docs](https://cleon-ui.vercel.app).
