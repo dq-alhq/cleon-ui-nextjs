@@ -4,18 +4,30 @@ import { Card, Grid, Link } from 'ui'
 
 export function Resources() {
     return (
-        <div className="container">
+        <div className='container'>
             <Grid
                 gap={6}
                 columns={{
                     initial: 1,
-                    sm: 2,
-                    lg: 3
+                    sm: 2
                 }}
-                className="[&_a]:cursor-pointer [&_a]:inset-0 [&_a]:absolute [&_a]:size-full [&_.grid-cell]:relative"
+                className='[&_a]:cursor-pointer [&_a]:inset-0 [&_a]:absolute [&_a]:size-full [&_.grid-cell]:relative'
             >
                 <Grid.Item>
-                    <Link target="_blank" href="https://getjustd.com" aria-label="Justd" />
+                    <Link target='_blank' href='https://cleon-ui.vercel.app' aria-label='Cleon-UI' />
+                    <Card>
+                        <Card.Header>
+                            <Card.Title>Cleon UI</Card.Title>
+                            <Card.Description>
+                                This Cleon UI component library is made with TailwindCSS and React. Forked from Irsyad's
+                                Just D.
+                            </Card.Description>
+                        </Card.Header>
+                    </Card>
+                </Grid.Item>
+
+                <Grid.Item>
+                    <Link target='_blank' href='https://getjustd.com' aria-label='Justd' />
                     <Card>
                         <Card.Header>
                             <Card.Title>Just D.</Card.Title>
@@ -28,7 +40,7 @@ export function Resources() {
                 </Grid.Item>
 
                 <Grid.Item>
-                    <Link target="_blank" href="https://getjustd.com/colors" aria-label="Colors" />
+                    <Link target='_blank' href='https://getjustd.com/colors' aria-label='Colors' />
                     <Card>
                         <Card.Header>
                             <Card.Title>Colors</Card.Title>
@@ -41,7 +53,7 @@ export function Resources() {
                 </Grid.Item>
 
                 <Grid.Item>
-                    <Link target="_blank" href="https://getjustd.com/icons" aria-label="Icons" />
+                    <Link target='_blank' href='https://getjustd.com/icons' aria-label='Icons' />
                     <Card>
                         <Card.Header>
                             <Card.Title>Icons</Card.Title>
